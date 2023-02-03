@@ -1,0 +1,72 @@
+.container__switch {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-125px);
+}
+
+.button__plus,
+.button__minus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 50%;
+    font-size: 30px;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button__plus:hover,
+.button__minus:hover {
+    transform: scale(1.1);
+}
+
+.button__plus:active,
+.button__minus:active {
+    transition: 0.2s;
+    transform: scale(1.35);
+}
+
+.container__switch.not__press .button__plus:active,
+.container__switch.not__press .button__minus:active {
+    transform: scale(1.1);
+}
+
+.button__plus.no__drop,
+.button__minus.no__drop {
+    cursor: no-drop;
+    color: gray;
+    border-color: gray;
+    transform: scale(0.8)
+}
+
+.screen__switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    user-select: none;
+    position: relative;
+    height: 100%;
+    width: 100px;
+}
+
+.first_replacer_numb,
+.second_replacer_numb {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.first_replacer_numb.active,
+.second_replacer_numb.active {
+    opacity: 1;
+}

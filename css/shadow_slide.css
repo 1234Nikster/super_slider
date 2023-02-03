@@ -1,0 +1,6 @@
+.container__shadow {
+    position: absolute;
+    background-color: white;
+    pointer-events: none;
+    outline: 2px dashed gray;
+}
